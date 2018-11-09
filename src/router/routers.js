@@ -421,5 +421,34 @@ export default [
       hideInMenu: true
     },
     component: () => import('@/view/error-page/404.vue')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    meta: {
+      icon: 'ios-bowtie',
+      title: '尝试尝试'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'test_test_1',
+        name: 'test_test_1',
+        meta: {
+          icon: 'ios-bowtie-outline',
+          title: '尝试一下'
+        },
+        component: () => import('@/view/test/test-test1.vue')
+      },
+      {
+        path: 'test_test_2',
+        name: 'test_test_2',
+        meta: {
+          icon: 'ios-bowtie-outline',
+          title: '尝试一下'
+        },
+        component: () => import('@/view/test/test-test2.vue')
+      }
+    ]
   }
 ]
